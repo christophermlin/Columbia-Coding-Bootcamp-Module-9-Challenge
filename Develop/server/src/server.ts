@@ -111,7 +111,7 @@ apiRouter.delete('/weather/history/:id', async (req: Request, res: Response) => 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Serve static files from the built client (dist) directory using absolute path from project root
+// Serve static files from the built client (dist) directory using correct path from server root
 app.use(express.static(path.resolve(process.cwd(), 'client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

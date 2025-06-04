@@ -10,13 +10,6 @@ This is a full-stack weather dashboard application built for the Module 09 Chall
 - All backend API endpoints are robust and return consistent data
 - Application is ready for deployment on Render
 
-## Acceptance Criteria
-- When a user searches for a city, they are presented with current and future conditions for that city, and the city is added to the search history
-- Current weather conditions display city name, date, icon, description, temperature, humidity, and wind speed
-- 5-day forecast displays date, icon, temperature, wind speed, and humidity for each day
-- Clicking a city in the search history re-runs the search and displays the weather
-- Users can delete cities from their search history (bonus)
-
 ## Technologies Used
 - Node.js
 - Express

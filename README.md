@@ -40,6 +40,3 @@ This is a full-stack weather dashboard application built for the Module 09 Chall
 
 ## Screenshot
 ![Weather Dashboard Screenshot](./Assets/Screenshot.png)
-
-## License
-MIT

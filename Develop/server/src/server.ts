@@ -7,8 +7,7 @@ dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Serve static files from the correct absolute path
-const clientPath = path.resolve(__dirname, '../../../client');
+// Remove unused clientPath variable
 
 console.log('Loaded OpenWeather API Key:', process.env.OPENWEATHER_API_KEY ? '[HIDDEN]' : '[NOT FOUND]');
 
@@ -116,9 +115,15 @@ apiRouter.delete('/weather/history/:id', async (req: Request, res: Response) => 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(express.static(clientPath));
+// Serve static files from the built client (dist) directory
+app.use(express.static(path.resolve(__dirname, '../../../client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', apiRouter);
+
+// Serve index.html for all non-API routes (for client-side routing)
+app.get('*', (_req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../../client/dist/index.html'));
+});
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));

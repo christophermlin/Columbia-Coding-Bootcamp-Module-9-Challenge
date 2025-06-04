@@ -18,23 +18,12 @@ This is a full-stack weather dashboard application built for the Module 09 Chall
 - OpenWeather API
 - HTML/CSS/JS (frontend)
 
-## Getting Started
-1. Clone this repository.
-2. Run `npm install` in the `server` directory.
-3. Create a `.env` file in the `server` directory with your OpenWeather API key:
-   ```
-   OPENWEATHER_API_KEY=your_api_key_here
-   ```
-4. Start the server with `npm start`.
-5. Visit `http://localhost:3001` in your browser.
 
 ## Deployment
-- This app is ready for deployment on Render. Ensure your `.env` and `.gitignore` are set up as shown above.
-
-- Link: <>
+- This app has been deployed on Render. Link: <https://columbia-coding-bootcamp-module-9.onrender.com>
 
 ## Screenshot
 ![Weather Dashboard Screenshot](./Assets/Screenshot.png)
 
 ## License
-MIT
+This project was built with the MIT license. 

@@ -28,11 +28,6 @@ This is a full-stack weather dashboard application built for the Module 09 Chall
 4. Start the server with `npm start`.
 5. Visit `http://localhost:3001` in your browser.
 
-## API Endpoints
-- `POST /api/weather` — Search for a city and get weather data (body: `{ city: "CityName" }`)
-- `GET /api/weather/history` — Get all saved cities
-- `DELETE /api/weather/history/:id` — Delete a city from history
-
 ## Deployment
 - This app is ready for deployment on Render. Ensure your `.env` and `.gitignore` are set up as shown above.
 
@@ -40,3 +35,6 @@ This is a full-stack weather dashboard application built for the Module 09 Chall
 
 ## Screenshot
 ![Weather Dashboard Screenshot](./Assets/Screenshot.png)
+
+## License
+MIT

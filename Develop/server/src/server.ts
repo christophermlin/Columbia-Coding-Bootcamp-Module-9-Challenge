@@ -111,15 +111,15 @@ apiRouter.delete('/weather/history/:id', async (req: Request, res: Response) => 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Serve static files from the built client (dist) directory using correct path from server root
-app.use(express.static(path.resolve(process.cwd(), 'client/dist')));
+// Serve static files from the built client (dist) directory using correct path from project root
+app.use(express.static(path.resolve(process.cwd(), '../client/dist')));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api', apiRouter);
 
 // Serve index.html for all non-API routes (for client-side routing)
 app.get('*', (_req, res) => {
-  res.sendFile(path.resolve(process.cwd(), 'client/dist/index.html'));
+  res.sendFile(path.resolve(process.cwd(), '../client/dist/index.html'));
 });
 
 app.listen(PORT, () => console.log(`Listening on PORT: ${PORT}`));
